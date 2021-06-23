@@ -1,6 +1,6 @@
 SHELL=/bin/bash
 CC?=gcc-10
-CFLAGS=-g
+CFLAGS=-g -O3 -z lazy
 CLIB=-lm
 SRC=$(wildcard *.c)
 TARGET=$(patsubst %.c, %, $(SRC))
@@ -11,4 +11,3 @@ all: ${TARGET}
 
 clean:
 	rm -f ${TARGET}
-

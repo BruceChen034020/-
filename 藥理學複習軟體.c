@@ -48,13 +48,14 @@ int main() {
     }
     srand(time(NULL));  // 設定亂數種子
     // system("pause");
-    getchar();
-    while (1) {
+    printf("Windows: Use ctrl + z to terminate process.\n");
+    printf("Linux: Use ctrl + d to terminate process.\n");
+
+    while ((i = getchar()) != EOF) {
         int r = rand() % N;  // 產生 0~N 的亂數
         printf("%s\n", wordBank[r]);
-        printf("\n");
+        // printf("\n");
         // system("pause");
-        getchar();
     }
 
     for (int i = 0; i < 4096; ++i) {

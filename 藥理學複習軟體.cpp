@@ -1,42 +1,42 @@
-/* ÃÄ²z¾Ç½Æ²ß³nÅéµ{¦¡½X
-³¯¥ú¿o Bruce Chen
+/* è—¥ç†å­¸è¤‡ç¿’è»Ÿé«”ç¨‹å¼ç¢¼
+é™³å…‰ç© Bruce Chen
 2021/6/21
-ª©¥»: 1.0.0.0
-­­¨î: ³Ì¦h50000­ÓÃÄ¦W¡A¨C­ÓÃÄ¦W³Ìªø20¦r¤¸ */
+ç‰ˆæœ¬: 1.0.0.0
+é™åˆ¶: æœ€å¤š50000å€‹è—¥åï¼Œæ¯å€‹è—¥åæœ€é•·20å­—å…ƒ */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <string.h>
+#include <time.h>
 
 /* Global variable */
-char DrugBuffer[1000000]; // ¯«¤ººë¯«³Â¾KÃÄª«.txt ªº¼È¦s
-char WordBank[50000][21]; // ÃÄ¦W word bank
-int N; // number of drugs
+char DrugBuffer[1000000];  // ç¥å…§ç²¾ç¥éº»é†‰è—¥ç‰©.txt çš„æš«å­˜
+char WordBank[50000][21];  // è—¥å word bank
+int N;                     // number of drugs
 
-/* µ{¦¡¶i¤JÂI */
-int main(){
-    printf("ÃÄ²z¾Ç½Æ²ß³nÅé\r\n¥»µ{¦¡ÀH¾÷¿é¥X¤@­ÓÃÄª«¦WºÙ¡A½Ğ§A»¡¥X¥Lªº¾AÀ³¯g©M§@¥Î¾÷Âà¡C\r\n");
-    FILE* A = fopen("¯«¤ººë¯«³Â¾KÃÄª«.txt", "r");
+/* ç¨‹å¼é€²å…¥é» */
+int main() {
+    printf("è—¥ç†å­¸è¤‡ç¿’è»Ÿé«”\r\næœ¬ç¨‹å¼éš¨æ©Ÿè¼¸å‡ºä¸€å€‹è—¥ç‰©åç¨±ï¼Œè«‹ä½ èªªå‡ºä»–çš„é©æ‡‰ç—‡å’Œä½œç”¨æ©Ÿè½‰ã€‚\r\n");
+    FILE* A = fopen("ç¥å…§ç²¾ç¥éº»é†‰è—¥ç‰©.txt", "r");
     int i;
-    for(i=0; i<50000; i++){
+    for (i = 0; i < 50000; i++) {
         int f = fscanf(A, "%s", WordBank[i]);
-        if(f != 1){
+        if (f != 1) {
             break;
         }
-        if(strlen(WordBank[i]) > 20){
-            printf("Äµ§i: ¦³ÃÄª«¦WºÙ¹Lªø¡C½ĞÁpµ¸¶}µoªÌ!\r\n¶}µoªÌ: ³¯¥ú¿o Bruce Chen\r\n");
+        if (strlen(WordBank[i]) > 20) {
+            printf("è­¦å‘Š: æœ‰è—¥ç‰©åç¨±éé•·ã€‚è«‹è¯çµ¡é–‹ç™¼è€…!\r\né–‹ç™¼è€…: é™³å…‰ç© Bruce Chen\r\n");
         }
     }
     N = i;
-    printf("¸ê®Æ®w¦³%d­ÓÃÄ\r\n", N);
-    if(N >= 50000){
-        printf("Äµ§i: ¸ê®Æ®wÃÄª«¹L¦h¡C½ĞÁpµ¸¶}µoªÌ!\r\n¶}µoªÌ: ³¯¥ú¿o Bruce Chen\r\n");
+    printf("è³‡æ–™åº«æœ‰%då€‹è—¥\r\n", N);
+    if (N >= 50000) {
+        printf("è­¦å‘Š: è³‡æ–™åº«è—¥ç‰©éå¤šã€‚è«‹è¯çµ¡é–‹ç™¼è€…!\r\né–‹ç™¼è€…: é™³å…‰ç© Bruce Chen\r\n");
     }
-    srand(time(NULL)); // ³]©w¶Ã¼ÆºØ¤l
+    srand(time(NULL));  // è¨­å®šäº‚æ•¸ç¨®å­
     system("pause");
-    while(1){
-        int r = rand() % N; // ²£¥Í 0~N ªº¶Ã¼Æ
+    while (1) {
+        int r = rand() % N;  // ç”¢ç”Ÿ 0~N çš„äº‚æ•¸
         printf(WordBank[r]);
         printf("\r\n");
         system("pause");

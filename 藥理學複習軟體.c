@@ -42,7 +42,7 @@ int main() {
         }
     }
     N = i;
-    printf("資料庫有%d個藥\r\n", N);
+    printf("資料庫有%d個藥\n", N);
     if (N >= 50000) {
         printf("警告: 資料庫藥物過多。請聯絡開發者!\n開發者: 陳光穎 Bruce Chen\n");
     }

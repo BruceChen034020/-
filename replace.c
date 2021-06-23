@@ -26,5 +26,6 @@ int main() {
             fprintf(B, "%c", buffer);
         }
     }
+    fprintf(B, "\n");
     return 0;
 }

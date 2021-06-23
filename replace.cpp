@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 int main(){
-    FILE *A; // ¯«¤ººë¯«³Â¾KÃÄª«.txt
+    FILE *A; // ç¥žå…§ç²¾ç¥žéº»é†‰è—¥ç‰©.txt
     FILE *B; // output file
     int i; // iterator
     char buffer; // the currently reading character
     int f; // return of fscanf
 
-    A = fopen("¯«¤ººë¯«³Â¾KÃÄª«.txt", "r");
+    A = fopen("ç¥žå…§ç²¾ç¥žéº»é†‰è—¥ç‰©.txt", "r");
     B = fopen("output.txt", "w");
     for(i=0; i<1000000; i++){
         f = fscanf(A, "%c", &buffer);
